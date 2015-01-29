@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Bookmark" representedClassName="Bookmark" syncable="YES">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="extended" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shared" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tag" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="toread" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="bookmarks" inverseEntity="Tag" syncable="YES"/>
+    </entity>
+    <entity name="Tag" representedClassName="Tag" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="bookmarks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Bookmark" inverseName="tags" inverseEntity="Bookmark" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Bookmark" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Tag" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>
